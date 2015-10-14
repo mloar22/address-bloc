@@ -37,18 +37,18 @@ require_relative '../models/address_book.rb'
      end
    end
   context "#remove_entry(entry)" do
-  it "confirms that a single entry is removed" do
-    #SETUP
-    book = AddressBook.new
-    book.add_entry(entry)
-    @entries = book.entries
-    entry = @entries.first
+    it "confirms that a single entry is removed" do
+      #SETUP
+     book = AddressBook.new
+     book.add_entry(entry)
+     @entries = book.entries
+     entry = @entries.first
 
-    #EXECUTION
-    book.remove_entry(entry)
+     #EXECUTION
+     book.remove_entry(entry)
 
-    #VALIDATION
-    expect(@entries.size).to eq 0
+     #VALIDATION
+     expect(@entries.size).to eq 0
   end
  end
 end
