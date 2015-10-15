@@ -100,11 +100,11 @@ require_relative "../models/address_book"
    def entry_view
     print "What entry would you like to see? "
     entry_desired = gets.chomp.to_i
-     puts@address_book.entries(entry_desired)
-     if entry_desired < @address_book.entries
+     puts @address_book.entries[entry_desired]
+     if entry_desired > @address_book.entries.count
       puts "invalid selection"
       entry_view
-     system "clear"
+      system "clear"
      end
    end
 

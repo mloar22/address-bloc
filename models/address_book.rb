@@ -4,7 +4,11 @@ require_relative "./entry.rb"
    attr_accessor :entries
 
    def initialize
-     @entries = []
+     @entries = [
+      Entry.new("Michael", "12321", "michael@example.com"),
+      Entry.new("Example1", "12321312", "Example1@example.com"),
+      Entry.new("Example2", "12321312", "Example2@example.com")
+     ]
    end
    
    def add_entry(name, phone, email)
