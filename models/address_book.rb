@@ -7,6 +7,9 @@ require_relative "entry"
     def initialize
 
      @entries = []
+
+
+     self.add_entry("Michael", "123456", "Michael@example.com")
     end 
 
     def add_entry(name, phone, email)
@@ -56,6 +59,11 @@ require_relative "entry"
       end
       return nil
     end
+
+    def a_bomb
+      @entries = []
+    end
+
    end
   
 

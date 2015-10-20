@@ -193,6 +193,16 @@ require_relative '../models/address_book.rb'
        expect(entry).to be_nil
      end 
    end
+
+   context "#a_bomb" do
+    it "should delete all entries" do
+      book.import_from_csv("entries.csv")
+      book.a_bomb
+      expect(book.entries.count).to eq(0)
+    end
+  end
+
+
 end
    
 
